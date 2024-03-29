@@ -3,7 +3,7 @@ import express, { Express } from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import path from "path";
-import router from "./router";
+import router from "@/router";
 
 class Application {
   #app: Express = express();
