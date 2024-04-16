@@ -40,10 +40,13 @@ class Application {
   configRoutes() {
     this.#app.use("/api", router);
   }
-  addDataToDb() {
-    sampleData.map(async (movie) => {
-      await MovieModel.create(movie);
-    });
+  async addDataToDb() {
+    const movies = await MovieModel.find();
+    if (!movies.length) {
+      sampleData.map(async (movie) => {
+        await MovieModel.create(movie);
+      });
+    }
   }
 }
 
