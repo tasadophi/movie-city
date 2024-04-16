@@ -1,7 +1,9 @@
 import { Request, Response } from "express";
+import MovieModel from "@/models/movieModel";
 
-const getAllMovies = (req: Request, res: Response) => {
-  res.json({ status: "success", data: [] });
+const getAllMovies = async (req: Request, res: Response) => {
+  const movies = await MovieModel.find();
+  res.json({ status: "success", data: movies });
 };
 
 const moviesController = {
