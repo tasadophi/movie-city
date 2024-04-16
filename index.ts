@@ -1,3 +1,5 @@
 import Application from "@/app";
 
-new Application();
+const app = new Application();
+
+app.addDataToDb();

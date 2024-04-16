@@ -4,6 +4,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 import path from "path";
 import router from "@/router";
+import sampleData from "@/sampleData";
+import MovieModel from "@/models/movieModel";
 
 class Application {
   #app: Express = express();
@@ -37,6 +39,11 @@ class Application {
   }
   configRoutes() {
     this.#app.use("/api", router);
+  }
+  addDataToDb() {
+    sampleData.map(async (movie) => {
+      await MovieModel.create(movie);
+    });
   }
 }
 
