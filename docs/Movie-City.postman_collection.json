@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "28c7fa49-e560-41e7-a323-beb50ee16c8a",
+		"name": "Movie-City",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22669528"
+	},
+	"item": [
+		{
+			"name": "Get All Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/movies/6606bebff6a1c4c7bbcdaa60",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						"6606bebff6a1c4c7bbcdaa60"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Top Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/movies/tops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						"tops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Latest Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/movies/tops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						"tops"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
